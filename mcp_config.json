@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "absorb": {
+      "command": "python",
+      "args": [
+        "server.py"
+      ]
+    }
+  }
+}
