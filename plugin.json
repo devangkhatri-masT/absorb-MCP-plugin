@@ -1,7 +1,7 @@
 {
   "name": "absorb",
   "version": "2.0.0",
-  "description": "Unified MCP Server and Orchestrator for codebase documentation across User, Developer, and Agent tracks.",
+  "description": "Unified MCP Server and Orchestrator for codebase documentation across User, Developer, and Agent tracks. Uses Chunked Writer Architecture.",
   "author": {
     "name": "User"
   }
