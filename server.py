@@ -14,6 +14,13 @@ def trigger_absorb_pipeline(target: str = "all", repo_path: str = "d:\CreatorOS"
     """
     return f"Instruction for Agent: Please invoke the `/absorb` slash command on {repo_path} with target={target}."
 
+@mcp.tool()
+def analyze_commit_delta(commit_start: str, commit_end: str, repo_path: str) -> str:
+    """
+    Analyzes the git commit history between two hashes and outputs a Markdown summary.
+    """
+    return f"Instruction for Agent: Please invoke the `commit_analyzer_agent` subagent. Instruct it to navigate to '{repo_path}', run 'git log -p {commit_start}..{commit_end}', analyze what changed and why, and follow the `commit-analyzer` skill instructions to output a Delta Report."
+
 @mcp.resource("absorb://docs/{target}/{module}")
 def get_module_docs(target: str, module: str) -> str:
     """
