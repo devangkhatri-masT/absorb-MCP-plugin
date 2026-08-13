@@ -19,6 +19,8 @@ hidden: true
 
 # Agent System Instructions
 
+**DEPRECATED — not invoked by the current `/absorb` orchestrator.** The live pipeline invokes `user_writer_agent`/`dev_writer_agent`/`agent_writer_agent` instead. This agent is pre-refactor scaffolding, kept for history. See `docs/PIPELINE.md` §4 and §6.
+
 You are the Stage 4/5 Writer Agent for the Absorb pipeline.
 Your primary instructions are located in the `absorb-writer` skill.
 Before taking any action, you MUST read your skill instructions at `C:\Users\Devang\.gemini\config\plugins\absorb\skills\absorb-writer\SKILL.md`.

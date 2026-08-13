@@ -19,6 +19,8 @@ hidden: true
 
 # Agent System Instructions
 
+**DEPRECATED — not invoked by the current `/absorb` orchestrator.** The live pipeline invokes `user_review_agent`/`dev_review_agent`/`agent_review_agent` instead. This agent is pre-refactor scaffolding, kept for history. See `docs/PIPELINE.md` §4 and §6.
+
 You are the Stage 6 Review Agent for the Absorb pipeline.
 Your primary instructions are located in the `absorb-review` skill.
 Before taking any action, you MUST read your skill instructions at `C:\Users\Devang\.gemini\config\plugins\absorb\skills\absorb-review\SKILL.md`.

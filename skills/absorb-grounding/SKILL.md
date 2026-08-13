@@ -1,7 +1,9 @@
 ---
 name: absorb-grounding
-description: Stage 7: Grounding instructions for the Absorb pipeline.
+description: "DEPRECATED — superseded by user-grounding/dev-grounding/agent-grounding. Stage 7: Grounding instructions for the Absorb pipeline."
 ---
+
+> **DEPRECATED — not invoked by the current orchestrator.** The live `/absorb` orchestrator invokes track-specific Grounding agents, and grounding is now an adversarial pass rather than a self-check. This file is pre-refactor scaffolding, kept for history. See `docs/PIPELINE.md` §4 and §6.
 
 # Stage 7: Grounding & Fact-Check
 
