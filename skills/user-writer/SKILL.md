@@ -9,6 +9,8 @@ description: Writer stage for End-Users.
 
 If a component referenced by your checklist slice is not present in this checkout, do not invent its behavior — write the surrounding flow from what you can verify and mark the missing piece `[NEEDS VERIFICATION: <component path> not found in checkout]`. This is a completeness gap, not something to smooth over with a plausible-sounding guess.
 
+For any checklist item Discovery tagged `STUB` (confirmed empty/unimplemented), say so **in the visible prose, at the point in the walkthrough where a user would actually encounter that feature** — e.g. "Clicking Sharing opens a share dialog — as of this pass, this screen exists in navigation but has no working functionality yet." Do not handle a `STUB` item only by omitting it from the walkthrough and letting it surface solely in a technical footnote/citation list at the end of the document; a footnote is invisible to someone reading the guide to figure out what they can actually do, and the entire point of tagging something `STUB` is that a real user might click it and needs to know what to expect.
+
 You MUST write exhaustively about every item in your assigned checklist slice using all available facts and your own code research. DO NOT summarize, and do not silently drop a checklist item because it seemed minor — if it's on your list, it gets a section, even a short one, or an explicit `[NEEDS VERIFICATION]`.
 
 **Track Rules:**

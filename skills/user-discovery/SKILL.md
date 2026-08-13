@@ -13,7 +13,8 @@ description: Discovery stage for End-Users.
 1. Find the route table (or equivalent) and list every route/screen it defines. This is your top-level checklist.
 2. For each screen, open its component file and list every child component it imports and renders — recursively, not just one level deep. Every inline card, modal, canvas, panel, and shared widget goes on the list.
 3. For each item, note its file path. If a referenced file does not exist in this checkout, add it to the checklist anyway, marked `UNRESOLVED` — do not quietly drop it. A later stage needs to know this gap exists so it can flag `[NEEDS VERIFICATION]` instead of guessing.
-4. Group the checklist by natural user-facing area (e.g. one group per major feature/workflow, plus shared chrome like navigation, auth, settings) — this grouping becomes the chunk boundaries for Stage 0 (Architect) and Stage 3 (Synthesis).
+4. If a referenced file **does** exist but is empty or an unimplemented placeholder (0 bytes, or a stub with no real render logic), mark it `STUB` — distinct from `UNRESOLVED`. `UNRESOLVED` means "couldn't check"; `STUB` means "checked, and it's confirmed not built yet." This distinction matters downstream: a `STUB` item is a real user-facing fact ("this feature isn't built") that must appear in the document's visible text, not just get cited in a footnote — a reader skimming for what's actually usable needs to see it, not just a completeness auditor checking sources.
+5. Group the checklist by natural user-facing area (e.g. one group per major feature/workflow, plus shared chrome like navigation, auth, settings) — this grouping becomes the chunk boundaries for Stage 0 (Architect) and Stage 3 (Synthesis).
 
 **Output:** a markdown checklist, not prose paragraphs — one line per screen/component, its path, and its `UNRESOLVED` status if applicable. This is deliberately terse; the narrative writing happens later, at the Writer stage.
 

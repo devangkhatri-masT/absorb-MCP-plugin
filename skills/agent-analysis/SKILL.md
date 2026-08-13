@@ -9,5 +9,7 @@ description: Analysis stage for AI Agents.
 
 **Counting method (do not skip this):** when a claimed number is "how many files import/call X," use an import-statement-shaped grep (matching the actual import/require syntax), never a bare string match for `X`'s name — a bare string match also catches comments and string literals and produces a fuzzy range instead of an exact count. If a precise import-statement grep genuinely isn't possible for a given fact, state that explicitly, name the reason, and report the honest range rather than silently reporting a looser grep's result as if it were exact.
 
+**Preserve hedges, don't flatten them:** a source doc's caveat on a fact ("used by N call sites directly, others unconfirmed," "verify per-case") is part of the fact for an agent consuming this schema — silently upgrading it to an unqualified claim is exactly the kind of overstatement an autonomous agent could act on incorrectly. Tag it `(hedge preserved from source)` if you can't independently resolve it this pass, rather than dropping the qualifier.
+
 **Track Rules:**
 Code Inclusion: HIGH. Actual code references, exact enumerations, file paths, and config keys are REQUIRED to prevent hallucination. Tone is robotic, extremely factual, and structured (YAML/JSON-like Markdown) for machine parsing.
